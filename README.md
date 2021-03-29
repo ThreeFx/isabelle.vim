@@ -28,8 +28,22 @@ Plug 'ThreeFx/isabelle.vim'
 
 #### Overview
 
+Fairly similar to the PIDE overview. The progress and output windows are simply
+buffers named `-PROGRESS-` and `-OUTPUT-`, making the layout easily
+configurable.
+
 ![](screenshots/overview.png)
 
 #### Sledgehammer + Code Action
 
+Code actions are supported for `sledgehammer`, `try` and `try0`. These are
+mainly based on string parsing though, so beware.
+
 ![](screenshots/sledgehammer.png)
+
+#### Proof skeletons
+
+Code actions are also supported for proof skeletons.
+
+![](screenshots/codeaction_before.png)
+![](screenshots/codeaction_after.png)
