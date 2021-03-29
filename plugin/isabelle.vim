@@ -17,6 +17,7 @@ function! s:isa_output_window()
 		noautocmd execute 'silent! belowright ' . g:isabelle_output_height . ' split -OUTPUT-'
 		setlocal buftype=nofile
 		setlocal bufhidden=hide
+		setlocal filetype=isabelle
 		setlocal noswapfile nobuflisted textwidth=0
 		setlocal nolist winfixheight nospell nowrap nonumber nocursorline
 		wincmd p
@@ -53,7 +54,7 @@ function! s:try_close()
 	endif
 endfunction
 
-command! IsabelleWindow call s:isa_output_window()|call s:isa_progress_window()
+command! IsabelleWindow call s:isa_progress_window()|call s:isa_output_window()
 
 augroup isabelle_vim
 	au!
