@@ -24,6 +24,12 @@ Plug 'ThreeFx/isabelle.vim'
 |`g:isabelle_output_height`|10|Height of the Isabelle output window|
 |`g:isabelle_process_width`|40|Height of the Isabelle process window|
 
-## Screenshots
+## Screenshots/Features
+
+#### Overview
 
 ![](screenshots/overview.png)
+
+#### Sledgehammer + Code Action
+
+![](screenshots/sledgehammer.png)
