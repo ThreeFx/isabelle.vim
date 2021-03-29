@@ -19,11 +19,10 @@ Plug 'ThreeFx/isabelle.vim'
 
 ## Configuration
 
-```
 |Variable|Default|Description|
-|g:isabelle_output_height|10|Height of the Isabelle output window|
-|g:isabelle_process_width|40|Height of the Isabelle process window|
-```
+|--------|-------|-----------|
+|`g:isabelle_output_height`|10|Height of the Isabelle output window|
+|`g:isabelle_process_width`|40|Height of the Isabelle process window|
 
 ## Screenshots
 
