@@ -34,6 +34,12 @@ configurable.
 
 ![](screenshots/overview.png)
 
+To use the progress window, you have to use [Mathias' Isabelle
+fork](https://github.com/m-fleury/isabelle-release), used for the `emacs-lsp`
+implementation. (Currently, you even have to use [my fork of his
+fork](https://github.com/ThreeFx/isabelle-release), since the emacs
+version deals with HTML output natively).
+
 #### Sledgehammer + Code Action
 
 Code actions are supported for `sledgehammer`, `try` and `try0`. These are
