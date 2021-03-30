@@ -893,6 +893,8 @@ hi default IsaDecorationTextAntiquote ctermfg=56
 hi default IsaDecorationTextRawText ctermfg=56
 hi default IsaDecorationTextPlainText ctermfg=56
 
+hi Conceal ctermbg=254
+
 "TODO: Overview colors
 "hi default IsaDecorationTextOverviewUnprocessed ctermfg=217
 "hi default IsaDecorationTextOverviewRunning ctermfg=53
