@@ -68,7 +68,7 @@ function! s:try_quit()
 		doautocmd ExitPre,VimLeavePre,VimLeave
 		execute 'qa'
 	else
-		let g:isabelle_vim_close == 0
+		let g:isabelle_vim_close = 0
 	endif
 endfunction
 
