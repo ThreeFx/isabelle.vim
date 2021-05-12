@@ -19,7 +19,7 @@ function! s:open_isa_output_window()
 		setlocal bufhidden=hide
 		setlocal filetype=isabelle
 		setlocal noswapfile nobuflisted textwidth=0
-		setlocal nolist winfixheight nospell nowrap nonumber nocursorline
+		setlocal nolist winfixheight nospell wrap nonumber nocursorline
 		wincmd p
 	endif
 endfunction
@@ -38,7 +38,7 @@ function! s:open_isa_progress_window()
 		setlocal buftype=nofile
 		setlocal bufhidden=hide
 		setlocal noswapfile nobuflisted textwidth=0
-		setlocal nolist winfixwidth nospell nowrap nonumber nocursorline
+		setlocal nolist winfixwidth nospell wrap nonumber nocursorline
 		wincmd p
 	endif
 endfunction

@@ -24,6 +24,13 @@ Plug 'ThreeFx/isabelle.vim'
 |`g:isabelle_output_height`|10|Height of the Isabelle output window|
 |`g:isabelle_process_width`|40|Height of the Isabelle process window|
 
+## Font
+
+I am currently using the [JuliaMono font](https://juliamono.netlify.app/) with
+this, mainly because all it's unicode symbols are actually monospaced as well.
+
+Note that this is not the font shown in the screenshots below.
+
 ## Screenshots/Features
 
 #### Overview
@@ -35,10 +42,8 @@ configurable.
 ![](screenshots/overview.png)
 
 To use the progress window, you have to use [Mathias' Isabelle
-fork](https://github.com/m-fleury/isabelle-release), used for the `emacs-lsp`
-implementation. (Currently, you even have to use [my fork of his
-fork](https://github.com/ThreeFx/isabelle-release), since the emacs
-version deals with HTML output natively).
+fork](https://github.com/m-fleury/isabelle-emacs), used for the `emacs-lsp`
+implementation.
 
 #### Sledgehammer + Code Action
 

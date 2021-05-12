@@ -289,10 +289,6 @@ syn match IsabelleSpecial /\\<circ>\|\<o\>/
 syn match IsabelleSpecial /\<O\>/
 syn match IsabelleSpecial /\./
 
-" Special handling for \long*arrow, \Long*arrow and \longmapsto
-syn match IsabelleSpecial /arrow>/ conceal cchar= 
-syn match IsabelleSpecial /sto>/ conceal cchar= 
-
 " Collapse Isabelle escape sequences.
 syn match IsabelleSpecial /\\<supseteq>/ conceal cchar=⊇
 syn match IsabelleSpecial /\\<KK>/ conceal cchar=𝔎
@@ -331,7 +327,7 @@ syn match IsabelleSpecial /\\<e>/ conceal cchar=𝖾
 syn match IsabelleSpecial /\\<lozenge>/ conceal cchar=◊
 syn match IsabelleSpecial /\\<u>/ conceal cchar=𝗎
 syn match IsabelleSpecial /\\<sharp>/ conceal cchar=♯
-syn match IsabelleSpecial /\\<Longleftright/ conceal cchar=⟺
+syn match IsabelleSpecial /\\<Longleftrightarrow>/ conceal cchar=⟺
 syn match IsabelleSpecial /\\<Otimes>/ conceal cchar=⨂
 syn match IsabelleSpecial /\\<EE>/ conceal cchar=𝔈
 syn match IsabelleSpecial /\\<I>/ conceal cchar=ℐ
@@ -400,7 +396,7 @@ syn match IsabelleSpecial /\\<times>/ conceal cchar=×
 syn match IsabelleSpecial /\\<noteq>/ conceal cchar=≠
 syn match IsabelleSpecial /\\<rangle>/ conceal cchar=⟩
 syn match IsabelleSpecial /\\<div>/ conceal cchar=÷
-syn match IsabelleSpecial /\\<Longright/ conceal cchar=⟹
+syn match IsabelleSpecial /\\<Longrightarrow>/ conceal cchar=⟹
 syn match IsabelleSpecial /\\<BB>/ conceal cchar=𝔅
 syn match IsabelleSpecial /\\<sqsupset>/ conceal cchar=⊐
 syn match IsabelleSpecial /\\<rightarrow>/ conceal cchar=→
@@ -413,7 +409,7 @@ syn match IsabelleSpecial /\\<euro>/ conceal cchar=€
 syn match IsabelleSpecial /\\<xx>/ conceal cchar=𝔵
 syn match IsabelleSpecial /\\<Y>/ conceal cchar=𝒴
 syn match IsabelleSpecial /\\<zeta>/ conceal cchar=ζ
-syn match IsabelleSpecial /\\<longleft/ conceal cchar=⟵
+syn match IsabelleSpecial /\\<longleftarrow>/ conceal cchar=⟵
 syn match IsabelleSpecial /\\<a>/ conceal cchar=𝖺
 syn match IsabelleSpecial /\\<onequarter>/ conceal cchar=¼
 syn match IsabelleSpecial /\\<And>/ conceal cchar=⋀
@@ -468,7 +464,7 @@ syn match IsabelleSpecial /\\<star>/ conceal cchar=⋆
 syn match IsabelleSpecial /\\<rightleftharpoons>/ conceal cchar=⇌
 syn match IsabelleSpecial /\\<equiv>/ conceal cchar=≡
 syn match IsabelleSpecial /\\<langle>/ conceal cchar=⟨
-syn match IsabelleSpecial /\\<Longleft/ conceal cchar=⟸
+syn match IsabelleSpecial /\\<Longleftarrow>/ conceal cchar=⟸
 syn match IsabelleSpecial /\\<nexists>/ conceal cchar=∄
 syn match IsabelleSpecial /\\<Odot>/ conceal cchar=⨀
 syn match IsabelleSpecial /\\<lfloor>/ conceal cchar=⌊
@@ -534,7 +530,7 @@ syn match IsabelleSpecial /\\<Down>/ conceal cchar=⇓
 syn match IsabelleSpecial /\\<diamondsuit>/ conceal cchar=♢
 syn match IsabelleSpecial /\\<rbrakk>/ conceal cchar=⟧
 syn match IsabelleSpecial /\\<lless>/ conceal cchar=≪
-syn match IsabelleSpecial /\\<longleftright/ conceal cchar=⟷
+syn match IsabelleSpecial /\\<longleftrightarrow>/ conceal cchar=⟷
 syn match IsabelleSpecial /\\<prec>/ conceal cchar=≺
 syn match IsabelleSpecial /\\<emptyset>/ conceal cchar=∅
 syn match IsabelleSpecial /\\<rparr>/ conceal cchar=⦈
@@ -555,7 +551,7 @@ syn match IsabelleSpecial /\\<ge>/ conceal cchar=≥
 syn match IsabelleSpecial /\\<flat>/ conceal cchar=♭
 syn match IsabelleSpecial /\\<zero>/ conceal cchar=𝟬
 syn match IsabelleSpecial /\\<Uplus>/ conceal cchar=⨄
-syn match IsabelleSpecial /\\<longmap/ conceal cchar=⟼
+syn match IsabelleSpecial /\\<longmapsto>/ conceal cchar=⟼
 syn match IsabelleSpecial /\\<supset>/ conceal cchar=⊃
 syn match IsabelleSpecial /\\<in>/ conceal cchar=∈
 syn match IsabelleSpecial /\\<sqinter>/ conceal cchar=⊓
@@ -603,7 +599,7 @@ syn match IsabelleSpecial /\\<y>/ conceal cchar=𝗒
 syn match IsabelleSpecial /\\<lbrakk>/ conceal cchar=⟦
 syn match IsabelleSpecial /\\<greatersim>/ conceal cchar=≳
 syn match IsabelleSpecial /\\<greaterapprox>/ conceal cchar=⪆
-syn match IsabelleSpecial /\\<longright/ conceal cchar=⟶
+syn match IsabelleSpecial /\\<longrightarrow>/ conceal cchar=⟶
 syn match IsabelleSpecial /\\<lceil>/ conceal cchar=⌈
 syn match IsabelleSpecial /\\<Gamma>/ conceal cchar=Γ
 syn match IsabelleSpecial /\\<odot>/ conceal cchar=⊙
@@ -661,7 +657,7 @@ syn region IsabelleLocaleFold
     \ end="\<end\>"
     \ fold keepend transparent
 
-syn match IsabelleComment "--.*$"
+"syn match IsabelleComment "--.*$"
 hi def link IsabelleComment Comment
 hi def link IsabelleCommentStart Comment
 hi def link IsabelleCommentContent Comment
@@ -788,7 +784,6 @@ if exists('g:isabelle_abbreviations')
     iab <buffer> ? <Bslash><lt>exists>
     iab <buffer> EX <Bslash><lt>exists>
     iab <buffer> ~? <Bslash><lt>nexists>
-    iab <buffer> ~ <Bslash><lt>not>
     iab <buffer> <Bar>- <Bslash><lt>turnstile>
     iab <buffer> <Bar>= <Bslash><lt>Turnstile>
     iab <buffer> <Bar>- <Bslash><lt>tturnstile>
@@ -813,6 +808,7 @@ if exists('g:isabelle_abbreviations')
     iab <buffer> SUP <Bslash><lt>Squnion>
     iab <buffer> INF <Bslash><lt>Sqinter>
     iab <buffer> ~= <Bslash><lt>noteq>
+    iab <buffer> ~ <Bslash><lt>not>
     iab <buffer> .= <Bslash><lt>doteq>
     iab <buffer> == <Bslash><lt>equiv>
     iab <buffer> <Bar><Bar> <Bslash><lt>parallel>
